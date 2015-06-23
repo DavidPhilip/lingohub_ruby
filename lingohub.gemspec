@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.files         = Dir['{lib}/**/*.rb', 'bin/*', 'LICENSE', '*.md']
 
   gem.add_dependency('rest-client', '~> 1.6.7')
-  gem.add_dependency('launchy',     '~> 2.0.5')
+  gem.add_dependency('launchy',     '~> 2.4.2')
   gem.add_dependency('stringex',    '~> 1.4.0')
 
   # gem.add_development_dependency('rake',    '~> 0.9.2')
