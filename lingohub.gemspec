@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('rest-client', '~> 1.6.7')
   gem.add_dependency('launchy',     '~> 2.0.5')
-  gem.add_dependency('stringex',    '~> 1.3.2')
+  gem.add_dependency('stringex',    '~> 1.4.0')
 
   # gem.add_development_dependency('rake',    '~> 0.9.2')
   # gem.add_development_dependency('rspec',   '~> 2.8.0')
