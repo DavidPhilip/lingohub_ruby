@@ -24,7 +24,7 @@ module Lingohub::Command
 
     def up
       project #project validation
-
+      extract_locale_from_args
       upload_resources(args)
     end
 
