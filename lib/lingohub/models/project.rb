@@ -96,7 +96,7 @@ module Lingohub
       end
 
       def save_to_file(path, content)
-        File.open(path, 'w+') { |f| f.write(content) }
+        File.open(path, 'w+') { |f| f.write(content.force_encoding("utf-8")) }
       end
 
       def resource_has_locale(resource, locale_as_filter)
