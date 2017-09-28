@@ -42,7 +42,9 @@ module Lingohub
         raise "Project does not contain that file." unless self.resources.has_key?(filename)
         resource = self.resources[filename]
 
+
         if locale_as_filter.nil? || resource_has_locale(resource, locale_as_filter)
+          puts "Saving contents to file #{resource.content}"
           save_to_file(File.join(directory, filename), resource.content)
           true
         else
@@ -96,6 +98,7 @@ module Lingohub
       end
 
       def save_to_file(path, content)
+        puts "Writing actual file to #{path}"
         File.open(path, 'w+') { |f| f.write(content.force_encoding("utf-8")) }
       end
 

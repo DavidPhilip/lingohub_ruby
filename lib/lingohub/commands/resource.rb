@@ -18,6 +18,7 @@ module Lingohub::Command
       if extract_query_from_args
         pull_search_results(directory)
       else
+        puts "Downloading resources to #{directory}"
         download_resources(directory)
       end
     end
@@ -90,6 +91,7 @@ module Lingohub::Command
 
       files_source.each do |file_name|
         begin
+          puts "Downloading file #{file_name}"
           downloaded = project.download_resource(directory, file_name, locale_as_filter)
           display("#{file_name} downloaded") if downloaded
         rescue
