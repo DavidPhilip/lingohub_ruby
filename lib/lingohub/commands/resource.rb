@@ -87,7 +87,9 @@ module Lingohub::Command
 
     def download_resources(directory)
       files_source = extract_all_from_args ? project.resources.keys : args
+      puts "Sources #{files_source}"
       locale_as_filter = extract_locale_from_args
+      puts "Locale Filter #{locale_as_filter}"
 
       files_source.each do |file_name|
         begin
